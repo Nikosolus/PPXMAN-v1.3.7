@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Pacman</title>
+    <link rel="stylesheet" href="design/style.css" />
+
+    <script type="module" src="source/Main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="source/joystick/joy.js"></script>
+    <!-- <script src="https://couchfriends.com/cdn/api/couchfriends.api-latest.js"></script> -->
+</head>
+
+<body>
+    <div id="container" class="mainScreen">
+      <div id="container-pausa">
+        <canvas class="board"></canvas>
+        <canvas class="game"></canvas>
+        <canvas class="screen"></canvas>
+      </div>
+        <div class="main display" id="pausedMenu">
+            <ul>
+                <li id="NuovoGame"><a><u>N</u>ew Game</a></li>
+                <li id="HighScore"><a href="#" data-action="highScores"><u>H</u>igh Scores</a></li>
+                <li><a><u>Q</u>uit</a></li>
+            </ul>
+        </div>
+
+        <div class="audio" data-action="sound">
+            <div class="waves">
+                <div></div><div></div>
+                <div></div><div></div>
+            </div>
+            <div class="triangle"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="input display">
+            <h2>Game Over</h2>
+            <p>Your name:</p>
+            <input type="text" />
+            <a href="#" data-action="save">Ok</a>
+            <li id="NuovoGame"><a><u>N</u>ew Game</a></li>
+        </div>
+
+        <div class="high display">
+            <h2>High Scores</h2>
+            <div class="scores"></div>
+            <div class="none">No scores available</div>
+            <a class="restore" href="#" data-action="restore">Restore</a>
+            <a class="back" href="#" data-action="mainScreen"><u>B</u>ack</a>
+        </div>
+
+        <div class="controls display">
+            <h1>Controls</h1>
+            <ol>
+                <li><span>Use the arrows or WASD keys to move the blob.</span></li>
+                <li><span>Space or P will pause the game.</span></li>
+                <li><span>M will trigger the sound on or off.</span></li>
+                <li><span>Use the links or keys (underline letters) to navigate throught the screens.</span></li>
+            </ol>
+            <a href="#" data-action="mainScreen"><u>B</u>ack</a>
+        </div>
+
+</div>
+
+    <!-- mobile buttons -->
+  <!--  <div class="controls" id="game-buttons">
+      <div>
+        <p id="up" class="controlButton">&uarr;</p>
+      </div>
+      <div>
+        <span id="left" class="controlButton">&larr;</span>
+        <span id="down" class="controlButton">&darr;</span>
+        <span id="right" class="controlButton">&rarr;</span>
+      </div>
+    -->
+
+
+<!-- joystick button -->
+
+  <div class="joy" id="joyDiv"></div>
+
+
+
+</body>
+</html>
